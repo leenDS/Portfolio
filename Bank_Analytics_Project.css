@@ -113,4 +113,38 @@ ul { margin-left: 2rem; margin-bottom: 2rem; }
     p { font-size: 1.4rem; }
     .feature-box { flex-direction: column; gap: 1.5rem; }
 }
+/* ===== Notable Insights & DAX ===== */
+.insights, .dax-measures {
+    margin-top: 3rem;
+}
 
+.insights h2, .dax-measures h2 {
+    font-size: 2rem;  /* أصغر من العنوان الرئيسي لكن واضح */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.insights ul {
+    font-size: 1.6rem; /* حجم نص مناسب */
+    line-height: 2;
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.dax-measures pre {
+    background: #1f1f1f;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 1.5rem;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    text-align: center;
+    font-size: 1.6rem; /* أصغر من العناوين لكن مقروء */
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid #ff3258;
+    color: #f0f0f0;
+}
