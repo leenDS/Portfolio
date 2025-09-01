@@ -22,12 +22,14 @@
       <div class="header__text">
         <h1 class="heading-primary">Banking Analytics Dashboard</h1>
         <p>Interactive Power BI dashboard providing insights on banking customers, loans, and deposits.</p>
+        <a href="https://github.com/username/bank-dashboard" class="btn btn--pink">View on GitHub</a>
+        <a href="files/Dashboard.pbix" class="btn btn--pink">Download Dashboard</a>
       </div>
     </div>
   </header>
 
   <main role="main">
-    <!-- ***** Project Description ***** -->
+    <!-- ***** Project Overview ***** -->
     <section class="project-description">
       <div class="row">
         <h2>Project Overview</h2>
@@ -44,24 +46,30 @@
         <h2>✨ Key Features</h2>
 
         <div class="feature-box">
-          <h3>Overview Page</h3>
-          <p>Snapshot of total customers, loans, deposits, and key banking KPIs. Easy navigation to detailed Loan & Deposit analysis.</p>
+          <div class="feature-text">
+            <h3>Overview Page</h3>
+            <p>Snapshot of total customers, loans, deposits, and key banking KPIs. Easy navigation to Loan & Deposit analysis.</p>
+          </div>
           <div class="project-image-box">
             <img src="images/dashboard_overview.png" alt="Dashboard Overview" loading="lazy">
           </div>
         </div>
 
         <div class="feature-box">
-          <h3>Loan Analysis</h3>
-          <p>Analyze total loans by client type, occupation, income band, and nationality. Helps identify lending trends.</p>
+          <div class="feature-text">
+            <h3>Loan Analysis</h3>
+            <p>Analyze total loans by client type, occupation, income band, and nationality. Helps identify lending trends.</p>
+          </div>
           <div class="project-image-box">
             <img src="images/dashboard_loan.png" alt="Loan Analysis" loading="lazy">
           </div>
         </div>
 
         <div class="feature-box">
-          <h3>Deposit Analysis</h3>
-          <p>Analyze total deposits by banking relationship, occupation, income band, and nationality. Visualizes deposit patterns.</p>
+          <div class="feature-text">
+            <h3>Deposit Analysis</h3>
+            <p>Analyze total deposits by banking relationship, occupation, income band, and nationality. Visualizes deposit patterns.</p>
+          </div>
           <div class="project-image-box">
             <img src="images/dashboard_deposit.png" alt="Deposit Analysis" loading="lazy">
           </div>
@@ -82,6 +90,27 @@
         </ul>
       </div>
     </section>
+
+    <!-- ***** Sample DAX Measures ***** -->
+    <section class="dax-measures">
+      <div class="row">
+        <h2>📊 Sample DAX Measures</h2>
+        <pre><code>-- Total Customers
+[Total Customers] = DISTINCTCOUNT('clients_data'[client_id])</code></pre>
+        <pre><code>-- Total Loans
+[Total Loans] = SUM('loans_data'[loan_amount])</code></pre>
+        <pre><code>-- Total Deposits
+[Total Deposits] = SUM('deposits_data'[deposit_amount])</code></pre>
+      </div>
+    </section>
+
+    <!-- ***** Footer ***** -->
+    <footer class="footer">
+      <div class="row">
+        <p>© 2025 Banking Analytics Dashboard | Maintained by Your Name</p>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
+

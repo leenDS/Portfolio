@@ -39,6 +39,21 @@ ul { margin-left: 2rem; }
 
 .header__text p { font-size: 2.5rem; }
 
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #ff3258;
+    border-radius: 1rem;
+    background: #ff3258;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    margin: 0.5rem 0.5rem 0 0;
+}
+
+.btn:hover { background: transparent; color: #ff3258; }
+
 /* ===== Features Section ===== */
 .feature-box {
     display: flex;
@@ -55,22 +70,27 @@ ul { margin-left: 2rem; }
 
 .feature-box:hover { transform: translateY(-0.8rem); box-shadow: 0 1rem 2rem rgba(0,0,0,0.5); }
 
-.feature-box .project-image-box {
+.feature-text { flex: 1; }
+
+.project-image-box {
     flex: 1;
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
 }
 
-.feature-box img {
+.project-image-box img {
     width: 100%;
     height: auto;
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.feature-box:hover img { transform: scale(1.05); filter: brightness(0.7); }
+.feature-box:hover .project-image-box img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
 
-.feature-box .project-image-box::after {
+.project-image-box::after {
     content: "🔗";
     position: absolute;
     font-size: 4rem;
