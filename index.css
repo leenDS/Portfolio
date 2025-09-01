@@ -230,25 +230,52 @@ a:focus { outline: 2px solid var(--pink); }
 .header__text p { margin: 1.5rem 0 3.5rem; max-width: var(--container-medium-width); font-family: 'Jost', sans-serif; font-size: var(--font-size-medium); }
 
 /* ===== Work Section ===== */
-.work__boxes { display: flex; flex-direction: column; gap: 5rem; }
+.work__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
 .work__box {
     display: flex;
     align-items: center;
-    margin-bottom: 5rem;
+    justify-content: space-between;
     gap: 3rem;
     background: var(--dark-gray);
     padding: 2rem;
     border-radius: 1rem;
-    position: relative;
     overflow: hidden;
+    position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.work__box:hover { transform: translateY(-0.8rem); box-shadow: 0 1rem 2rem rgba(0,0,0,0.5); }
+.work__box:hover { 
+    transform: translateY(-0.8rem); 
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.5); 
+}
 
-.work__image-box { position: relative; flex: 1; overflow: hidden; border-radius: 1rem; }
-.work__image-box img { width: 100%; transition: transform 0.5s ease, filter 0.5s ease; }
-.work__box:hover .work__image-box img { transform: scale(1.05); filter: brightness(0.7); }
+.work__text {
+    flex: 1;
+}
+
+.work__image-box {
+    flex: 1;
+    overflow: hidden; 
+    border-radius: 1rem; 
+    position: relative;
+}
+
+.work__image-box img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.work__box:hover .work__image-box img { 
+    transform: scale(1.05); 
+    filter: brightness(0.7); 
+}
+
 .work__image-box::after {
     content: "🔗";
     position: absolute;
@@ -258,8 +285,21 @@ a:focus { outline: 2px solid var(--pink); }
     transform: translate(-50%, -50%) scale(0);
     color: var(--pink);
     transition: all 0.3s ease;
+    pointer-events: none;
 }
-.work__box:hover .work__image-box::after { transform: translate(-50%, -50%) scale(1); }
+
+.work__box:hover .work__image-box::after { 
+    transform: translate(-50%, -50%) scale(1); 
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 900px) {
+    .work__box {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
 
 /* ===== Skills ===== */
 .skills__list {
