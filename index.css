@@ -278,14 +278,15 @@ a:focus { outline: 2px solid var(--pink); }
 
 /* ===== About ===== */
 .about__content {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 3rem;
+    display: block; /* بدل flex */
 }
 
-.about__photo-container { flex: 1; margin-bottom: var(--gutter-normal); }
-.about__text { flex: 0 0 35%; }
+.about__text {
+    flex: none; /* إزالة أي قيود flex */
+    width: 100%; /* النص ياخذ كل العرض */
+    max-width: 800px; /* اختياري لتجنب امتداد النص كثير على الشاشات الكبيرة */
+    margin: 0 auto; /* تمركز النص في الوسط */
+}
 
 /* ===== Contact ===== */
 .contact__form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 1.5rem; }
