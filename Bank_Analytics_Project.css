@@ -93,7 +93,7 @@ ul { margin-left: 2rem; margin-bottom: 2rem; }
 .feature-box:hover img { transform: scale(1.05); filter: brightness(0.7); }
 
 .project-image-box::after {
-    content: "🔗";
+    
     position: absolute;
     font-size: 3rem;
     top: 50%;
