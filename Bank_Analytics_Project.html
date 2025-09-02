@@ -33,7 +33,7 @@
 
     <!-- ***** Key Features ***** -->
     <section class="key-features">
-      <h2>✨ Key Features</h2>
+      <h2>Key Features</h2>
 
       <div class="feature-box">
         <div class="feature-text">
@@ -41,7 +41,7 @@
           <p>Snapshot of total customers, loans, deposits, and key banking KPIs. Easy navigation to detailed Loan & Deposit analysis.</p>
         </div>
         <div class="project-image-box">
-          <img src="images/dashboard_overview.png" alt="Dashboard Overview">
+          <img src="images/Banking_Dashboard.png" alt="Dashboard Overview">
         </div>
       </div>
 
@@ -51,7 +51,7 @@
           <p>Analyze total loans by client type, occupation, income band, and nationality. Helps identify lending trends.</p>
         </div>
         <div class="project-image-box">
-          <img src="images/dashboard_loan.png" alt="Loan Analysis">
+          <img src="images/Loan_analysis.png" alt="Loan Analysis">
         </div>
       </div>
 
@@ -61,7 +61,7 @@
           <p>Analyze total deposits by banking relationship, occupation, income band, and nationality. Visualizes deposit patterns.</p>
         </div>
         <div class="project-image-box">
-          <img src="images/dashboard_deposit.png" alt="Deposit Analysis">
+          <img src="images/Deposit_analysis.png" alt="Deposit Analysis">
         </div>
       </div>
 
@@ -69,7 +69,7 @@
 
 <!-- ***** Notable Insights ***** -->
 <section class="insights">
-  <h2>🧩 Notable Insights</h2>
+  <h2>Notable Insights</h2>
   <ul>
     <li>Customer segmentation shows influence of occupation & income on loans and deposits.</li>
     <li>Business lending dominates loans, highlighting corporate focus.</li>
@@ -81,12 +81,12 @@
 <!-- ***** Sample DAX Measures ***** -->
 <section class="dax-measures">
   <h2>📊 Sample DAX Measures</h2>
-  <pre><code>-- Total Customers
-[Total Customers] = DISTINCTCOUNT('clients_data'[client_id])</code></pre>
+  <pre><code>-- Year of joining
+[Year of joining] = YEAR('banking-clients'[Joined Bank])</code></pre>
   <pre><code>-- Total Loans
-[Total Loans] = SUM('loans_data'[loan_amount])</code></pre>
+[Total Loans] = SUM('banking-clients'[Bank Loans])+SUM('banking-clients'[Business Lending])+SUM('banking-clients'[Credit Card Balance])</code></pre>
   <pre><code>-- Total Deposits
-[Total Deposits] = SUM('deposits_data'[deposit_amount])</code></pre>
+[Total Deposits] = SUM('banking-clients'[Bank Deposits])+SUM('banking-clients'[Saving Accounts])+SUM('banking-clients'[Checking Accounts])+SUM('banking-clients'[Foreign Currency Account])</code></pre>
 </section>
 
 <!-- ***** Footer ***** -->
